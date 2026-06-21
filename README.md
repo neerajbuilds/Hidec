@@ -1,4 +1,4 @@
-# FolderLock
+# Hidec
 
 A Windows 11 folder-encryption tool with a PIN. Encrypts every file in a folder using **AES-256-GCM**. PINs are never stored — only a PBKDF2-SHA256 hash (600 000 iterations) is saved inside the vault.
 
@@ -39,7 +39,7 @@ build.bat
 build_no_icon.bat
 ```
 
-The finished executable will be at `dist\FolderLock.exe`.  
+The finished executable will be at `dist\Hidec.exe`.  
 It is a single self-contained file — no Python installation needed to run it.
 
 ---
@@ -66,8 +66,8 @@ The GCM auth tag protects against tampering — decryption will fail if even a s
 
 ## Security notes
 
-- The `--onefile` PyInstaller build bundles the Python runtime; antivirus software may flag it. Add an exclusion for `FolderLock.exe` if needed.
-- FolderLock does **not** prevent deletion of encrypted files — use Windows file permissions or a separate backup for critical data.
+- The `--onefile` PyInstaller build bundles the Python runtime; antivirus software may flag it. Add an exclusion for `Hidec.exe` if needed.
+- Hidec does **not** prevent deletion of encrypted files — use Windows file permissions or a separate backup for critical data.
 - If you forget your PIN, your files **cannot be recovered**. There is no backdoor.
 
 ---
